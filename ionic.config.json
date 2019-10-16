@@ -1,6 +1,8 @@
 {
   "name": "LoyaltyIonic",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular",
   "id": "d7d62d74"
 }
