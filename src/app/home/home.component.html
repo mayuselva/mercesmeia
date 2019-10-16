@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end" color="primary">
+      <ion-button  margin (click)="openMenuModal()">
+        <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-img alt="logo" expand="block" src="../../assets/images/logo.png"></ion-img>
+    <!-- <ion-img class="qr"  src="../../assets/images/qrcode.png"></ion-img> -->
+
+    <div *ngIf="createdCode" style="text-align: center;">
+      <div style="text-align: center;">
+        <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+      </div>
+        <p>{{createdCode}}</p>
+    </div>
+    <ion-button expand="block"  shape="round" color="secondary" [routerLink]="['/home/cards']" routerDirection="root">
+        <ion-icon ios="ios-redo" md="md-redo" class="icon-next"></ion-icon>
+        CARDS
+    </ion-button>
+  </div>
+</ion-content>
+<ion-footer  class="ion-padding">
+    <ion-toolbar>
+      <div>Powered by: Visual Business Retail Limited</div>
+      <div><span>&copy;</span> 2019</div>
+    </ion-toolbar>
+  </ion-footer>

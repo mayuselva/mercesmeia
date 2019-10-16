@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="header">
+      <ion-buttons slot="start" color="secondary">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+      <ion-title color="primary">CARDS</ion-title>
+      <ion-buttons slot="end" color="primary">
+        <ion-button  margin (click)="openMenuModal()">
+          <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-padding">
+      <ion-col size="6" *ngFor="let card of service.cards">
+        <ion-row class="cardno">
+          <b>{{card.loyaltyCardNo}}</b>
+        </ion-row>
+        <div class="card" (click)="selectCard(card)" [routerLink]="['/home/cards/sub']" routerDirection="root">
+            <ion-row >
+              <ion-img src="{{imgBaseUrl + card.loyaltySchemeId}}"></ion-img>
+            </ion-row>
+            <ion-row class="trophy">
+              <ion-icon  ios="ios-trophy" md="md-trophy"></ion-icon>
+              <ion-label color="primary">{{card.availablePoints}} <b>Points</b></ion-label>
+            </ion-row>
+        </div>  
+      </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer  class="ion-padding">
+    <ion-toolbar>
+      <div>Powered by: Visual Business Retail Limited</div>
+      <div><span>&copy;</span> 2019</div>
+    </ion-toolbar>
+</ion-footer>

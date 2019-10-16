@@ -1,0 +1,31 @@
+ion-col{
+    text-align: center;
+    color: #384761;
+    font-weight: bold;
+}
+ion-col div:last-child{
+    padding-top: 5px;
+    color: #ffa500;
+    font-weight: bold;
+}
+ion-card-header{
+    background-color: #38476124;
+    color: #384761;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+ion-item{
+    color: #8a8787;
+}
+ion-card-subtitle{
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    padding-top: 10px;
+    color: #d33939ba;
+}
+ion-card{
+    box-shadow: none;
+    border: 1px solid #384761;
+}

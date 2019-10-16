@@ -1,0 +1,32 @@
+.icon-next{
+    padding-right: 3px;
+    font-weight: bold !important;
+}
+ion-button{
+    height: 55px;
+    font-size: 19px;
+}
+@media screen and  (max-width: 1030px) {
+    ion-img{
+        height: 221px !important;
+    }
+}
+@media screen and  (max-width: 800px) {
+    ion-img{
+        height: 127px !important;
+    }
+}
+@media screen and  (max-width: 400px) {
+    ion-img{
+        height: 110px !important;
+    }
+}
+ion-img{
+    width: 100%;
+}
+
+ion-card{
+    margin-top:0 !important;
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
+}

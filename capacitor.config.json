@@ -1,0 +1,7 @@
+{
+  "appId": "com.vbr.Mercesmeia",
+  "appName": "Mercesmeia",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

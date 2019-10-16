@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="menu-toolbar">
+    <ion-title color="primary">Menu</ion-title>
+    <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content> 
+  <div style="padding-left: 41%; padding-top: 15%;">
+    <ion-avatar item-start>
+      <ion-img src="../assets/images/person.png?tui"></ion-img>
+    </ion-avatar> 
+  </div>
+  <div class="div-text">
+    <div>
+        <ion-label>
+          {{name.toLocaleUpperCase()}}
+        </ion-label>
+    </div>
+    <div>
+      <ion-label>077 4567 856</ion-label>
+    </div>   
+  </div>
+  <ion-list style="padding-top: 5%;">
+    <ion-item
+        (click)="goPage('my-profile')">
+        <ion-icon ios="ios-person" md="md-person" slot="start"></ion-icon>
+        <ion-label>My Profile</ion-label>
+    </ion-item>
+    <ion-item
+      (click)="goPage('cards')">
+      <ion-icon ios="ios-card" md="md-card" slot="start"></ion-icon>
+      <ion-label>Cards</ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/home/aboutus']" (click)="closeModal()">
+      <ion-icon ios="ios-information-circle" md="md-information-circle" slot="start"></ion-icon>
+      <ion-label>About us</ion-label>
+    </ion-item>
+    <ion-item  (click)="logout()">
+      <ion-icon name="exit" slot="start"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

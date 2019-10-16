@@ -1,0 +1,74 @@
+.header{
+    padding: 5px;
+}
+.card{
+    border: 1px solid black;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+}
+@media screen and  (min-width: 1025px) {
+    ion-img{
+        height: 300px !important;
+    }
+}
+@media screen and  (max-width: 1025px) {
+    ion-img{
+        height: 200px !important;
+    }
+    ion-icon{
+        font-size: 55px !important;
+    }
+    ion-label{
+        font-size: 41px !important;
+        padding-left: 125px !important;
+    }
+}
+@media screen and  (max-width: 800px) {
+    ion-img{
+        height: 165px !important;
+    }
+    ion-icon{
+        font-size: 45px !important;
+    }
+    ion-label{
+        font-size: 29px !important;
+        padding-left: 80px !important;
+    }
+}
+@media screen and  (max-width: 500px) {
+    ion-img{
+        height: 90px !important;
+    }
+    ion-label{
+        padding-left: 11px !important;
+        font-size: 22px !important;
+    }
+    ion-icon{
+        font-size: 30px !important;
+    }
+}
+@media screen and  (max-width: 361px) {
+    ion-img{
+        height: 65px !important;
+    }
+}
+ion-img {
+    width: 100%;
+    object-fit: cover !important;
+}
+.trophy ion-icon {
+    color: var(--ion-color-warning);
+    margin-left: 15px;
+}
+ion-label{
+    padding: 5px;
+    font-weight: bold;
+}
+b{
+    font-size: 13px !important;
+}
+.cardno b{
+    font-size: 15px !important;
+    color: var(--ion-color-primary);
+    padding-bottom: 4px;
+}

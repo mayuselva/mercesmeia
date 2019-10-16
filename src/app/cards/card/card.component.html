@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar class="header">
+      <ion-buttons slot="start" color="secondary">
+        <ion-back-button defaultHref="/home/cards"></ion-back-button>
+      </ion-buttons>
+      <ion-title *ngIf="service.selectedCard" color="primary" >
+        {{service.selectedCard.loyaltySchemeName}}
+      </ion-title>
+      <ion-buttons slot="end" color="primary">
+        <ion-button color="primary"  margin (click)="openMenuModal()">
+          <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+        </ion-button>
+      </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+        <ion-img src="{{imgBaseUrl + service.selectedCard.loyaltySchemeId}}"></ion-img>
+        <ion-card-subtitle>
+          Card# : {{service.selectedCard.loyaltyCardNo}}
+          <span class="right">{{service.selectedCard.loyaltySchemeLevel.toUpperCase()}}</span>
+        </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-title >
+      {{service.selectedCard.loyaltySchemeName.toUpperCase()}} LOYALTY POINTS
+    </ion-card-title>
+    <ion-card-content>
+      <div class="content">
+          <ion-list>
+            <ion-item>
+              <label>Current Points</label>
+              <ion-badge color="warning" slot="end">??</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Current Balance</ion-label>
+              <ion-badge color="warning" slot="end">??</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Available Points</ion-label>
+              <ion-badge color="warning" slot="end">{{service.selectedCard.availablePoints}}</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Available Balance</ion-label>
+              <ion-badge color="warning" slot="end">{{service.selectedCard.availableBalance | currency:'GBP'}}</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Top Up Points</ion-label>
+              <ion-badge color="warning" slot="end">??</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Redeem Points</ion-label>
+              <ion-badge color="warning" slot="end">{{service.selectedCard.redeemablePoints}}</ion-badge>
+            </ion-item>
+          </ion-list>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer  class="ion-padding">
+    <ion-toolbar>
+      <div>Powered by: Visual Business Retail Limited</div>
+      <div><span>&copy;</span> 2019</div>
+    </ion-toolbar>
+</ion-footer>
+  
