@@ -1,6 +1,8 @@
 {
   "name": "LoyaltyIonic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "47e09c26"
 }
